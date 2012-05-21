@@ -5,7 +5,7 @@
     <title>Get Another Label project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Panos Iperiotis">
 
     <!-- Le styles -->
     <link href="docs/assets/css/bootstrap.css" rel="stylesheet">
@@ -57,7 +57,7 @@
           </div>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
+              <li class="active"><a href="#"><i class="icon-home icon-white"></i>Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
@@ -82,16 +82,47 @@
         <div class="span9">
           <div class="hero-unit">
             <h1>Get Another Label</h1>
-            <p><br/>Mechanical Turk and other "micro-outsourcing" platforms allow the easy collection of annotation data from a wide variety of onliner workers. Unfortunately, the results returned back from the workers are of imperfect quality: No worker is perfect and each worker commits different types of errors. Some workers are nothing more than spammers doing minimal, if any, real work.</p>
-            <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+            <p>Mechanical Turk and other "micro-outsourcing" platforms allow the easy collection of annotation data from a wide variety of onliner workers. Unfortunately, the results returned back from the workers are of imperfect quality: No worker is perfect and each worker commits different types of errors. Some workers are nothing more than spammers doing minimal, if any, real work.</p>
+	      <a data-toggle="modal" href="#myModal" class="btn btn-medium btn-info"><i class="icon-info-sign icon-white"></i> Learn More</a>
           </div>
           </div><!--/span-->
       </div><!--/row-->
+ 
+    <div class="modal hide fade in" id="myModal">
+		<div class="modal-header">
+			<button class="close" data-dismiss="modal"><i class="icon-remove"></i></button>
+			<h3>DSaS as a REST-based web service</h3>
+		</div>
+		<div class="modal-body">
+			<p>DSaS (Dawid Skene as a Service) provides the set of web-methods which could be used for calculation and data storing.</p>
+			<p>
+			    More info you can find
+			    <a href="pages/1_2.html" target="_blank">here</a>
+			</p>
+			 <p><h4><i class="icon-list"></i> The Dawid-Skene Algorithm</h4></p>
+			 <p>The algorithm is a variation of the expectation-maximization algorithm of Dawid and Skene from the paper: _Maximum Likelihood Estimation of Observer Error-Rates Using the EM Algorithm, Applied Statistics, Vol. 28, No. 1. (1979), pp. 20-28_. The algorithm runs in rounds, performing the following steps in each round: </p>
+			 <p>&nbsp;<i class="icon-asterisk"></i> 1. Using the labels given by multiple workers, estimate the most likely "correct" label for each object. </p>
+			 <p>&nbsp;<i class="icon-asterisk"></i> 2. Based on the estimated correct answer for each object, compute the error rates for each worker.</p>
+			 <p>&nbsp;<i class="icon-asterisk"></i> 3. Taking into consideration the error rates for each worker, recompute the most likely "correct" label for each object.</p>
+			 <p>&nbsp;<i class="icon-asterisk"></i> 4. Go to step 2</p>
+			 <p><h4><i class="icon-list"></i> Differences of Get-Another-Label from The Dawid-Skene Algorithm</h4></p>
+			 <p>A few key differences with the original algorithm: </p>
+			 <p>&nbsp;<i class="icon-asterisk"></i> When evaluating the quality of a worker (i.e., its own confusion matrix) we compare the labels assigned by the worker with the "most probable" category of the object. However, unlike the original Dawid-Skene, we do not take into consideration the labels of the worker in determining the category of the object but we use only the labels assigned by the other workers that labeled this object.</p>
+			 <p>&nbsp;<i class="icon-asterisk"></i> We compute scalar quality metrics that are based on the expected cost of the misclassifications of the workers; these metrics are normalized to be between 0 and 1, and take into consideration the different costs of the misclassification decisions.</p>
+			 <p>&nbsp;<i class="icon-asterisk"></i> We give the ability to have fixed prior values for the categories, instead of defining the priors in a maximum likelihood manner by the data.</p>
+			 <p>&nbsp;<i class="icon-asterisk"></i> We allow the inclusion of "gold" data, which are objects that have immutable categories that are not being modified by the algorithm but are used to evaluate workers. (This makes the algorithm "semi"-supervised instead of completely unsupervised).</p>
+			 <p><h4><i class="icon-list"></i> Details of Running the Algorithm</h4></p>
+			 <p>&nbsp;<i class="icon-asterisk"></i> For details of how to run the Get-Another-Label algorithm see <a target="_blank" href="https://github.com/ipeirotis/Get-Another-Label/wiki/How-to-Run-Get-Another-Label">wiki</a></p>
+		</div>
+		<div class="modal-footer">
+			<a class="btn" data-dismiss="modal" href="#">Close</a>
+		</div>
+    </div>
 
       <hr>
 
       <footer>
-        <p>&copy; Company 2012</p>
+        <p>&copy; Panos Iperiotis 2012</p>
       </footer>
 
     </div><!--/.fluid-container-->

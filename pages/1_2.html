@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Bootstrap, from Twitter</title>
+    <title>Api Reference</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Panos Iperiotis">
 
     <!-- Le styles -->
     <link href="../docs/assets/css/bootstrap.css" rel="stylesheet">
@@ -33,8 +33,7 @@
     <link rel="apple-touch-icon-precomposed" href="../docs/assets/ico/apple-touch-icon-57-precomposed.png">
   </head>
 
-  <body>
-
+  <body onload="prettyPrint()">
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
@@ -57,7 +56,7 @@
           </div>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="../index.html">Home</a></li>
+              <li><a href="../index.html"><i class="icon-home icon-white"></i>Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
@@ -81,51 +80,729 @@
         </div><!--/span-->
         <div class="span9">
           <div class="hero-unit">
-            <h1>API Reference</h1>
-            <p><br/>Dddddd dddddd ddddddd ddd dddd ddddd ddd ddddd dd dddd ddddd dddddd ddddd ddddd ddddd ddd d ddd</p>
-            <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+            <h1><img src="../docs/assets/img/glyphicons/glyphicons_155_show_thumbnails.png" class="bs-icon"> API Reference</h1>
+            <p><br/>The DSaS API is organized around <a href="http://en.wikipedia.org/wiki/Representational_State_Transfer" target="_blank">REST</a>. Our API is designed to have predictable, resource-oriented URLS, to use HTTP response codes to indicate API errors, and to use built-in HTTP features. <a href="http://www.json.org/" target="_blank">JSON</a> will be returned in all responses from the API, including errors. </p>
+            <a data-toggle="modal" href="#myModal" class="btn btn-medium btn-info"><i class="icon-info-sign icon-white"></i> Learn More</a>
           </div>
-          <div class="row-fluid">
-            <div class="span4">
-              <h2>Heading Page1.2 N1</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="span4">
-              <h2>Heading Page1.2 N2</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="span4">
-              <h2>Heading Page1.2 N3</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.  </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
-            </div><!--/span-->
-          </div><!--/row-->
-          <div class="row-fluid">
-            <div class="span4">
-              <h2>Heading Page1.2 N4</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="span4">
-              <h2>Heading Page1.2 N5</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="span4">
-              <h2>Heading Page1.2 N6</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
-            </div><!--/span-->
-          </div><!--/row-->
+          
+          
+          <div class="tabbable"> 
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#tab1" data-toggle="tab">Libraries</a></li>
+              <li><a href="#tab2" data-toggle="tab">API Endpoint</a></li>
+              <li><a href="#tab3" data-toggle="tab">Summary of Resource URL Patterns</a></li>
+              <li><a href="#tab4" data-toggle="tab">Wrapped methods WITHOUT any JSON parameters </a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane active" id="tab1">
+                <p>Library available <a href="https://github.com/jattenberg/DSaS" target="_blank">here</a>, need to be built as .WAR and deployed on Tomcat 6.xx. </p>
+              </div>
+              <div class="tab-pane" id="tab2">
+                <p>Available <a href="http://23.21.128.180:8080/GetAnotherLabel/rest/" target="_blank">here</a>, just add web-method name and parameters.</p>
+              </div>
+              <div class="tab-pane" id="tab3">
+                <p>
+                  
+                                    
+                  <div id="accordion2" class="accordion">
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a href="#collapseOne" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle">
+                          GET <code>ping</code>
+                        </a>
+                      </div>
+                      <div class="accordion-body collapse" id="collapseOne">
+                        <div class="accordion-inner">
+                          <ul>
+                            <li><b>Description</b></li>&nbsp;&nbsp;&nbsp;&nbsp;a simple method to see if the service is awake
+                            <li><b>Parameters</b></li>&nbsp;&nbsp;&nbsp;&nbsp;none
+                            <li><b>Sample Request</b></li>&nbsp;&nbsp;&nbsp;&nbsp;http://23.21.128.180:8080/GetAnotherLabel/rest/ping
+                            <li><b>Sample Response</b></li>&nbsp;&nbsp;&nbsp;&nbsp;"processing request at: 2012-03-27T22:06:06.619Z"
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a href="#collapseTwo" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle">
+                          GET <code>reset?id={id}</code>
+                        </a>
+                      </div>
+                      <div class="accordion-body collapse" id="collapseTwo">
+                        <div class="accordion-inner">
+                           <ul>
+                            <li><b>Description</b></li>&nbsp;&nbsp;&nbsp;&nbsp;resets the ds model
+                            <li><b>Parameters</b></li>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]
+                            <li><b>Sample Request</b></li>&nbsp;&nbsp;&nbsp;&nbsp;http://23.21.128.180:8080/GetAnotherLabel/rest/reset?id=1
+                            <li><b>Sample Response</b></li>&nbsp;&nbsp;&nbsp;&nbsp;nullified the ds object, and deleted ds with id 1
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a href="#collapseThree" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle">
+                          GET <code>exists?id={id}</code>
+                        </a>
+                      </div>
+                      <div class="accordion-body collapse" id="collapseThree">
+                        <div class="accordion-inner">
+                          <ul>
+                            <li><b>Description</b></li>&nbsp;&nbsp;&nbsp;&nbsp;checks if BatchDawidSkene/IncrementalDawidSkene object with specified identefier exists in database (and cache)
+                            <li><b>Parameters</b></li>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]
+                            <li><b>Sample Request</b></li>&nbsp;&nbsp;&nbsp;&nbsp;http://23.21.128.180:8080/GetAnotherLabel/rest/exists?id=7
+                            <li><b>Sample Response</b></li>&nbsp;&nbsp;&nbsp;&nbsp;true
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a href="#collapseFour" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle">
+                          POST <code>loadCategories?categories={categories}&id={id}&incremental={incremental}</code>
+                        </a>
+                      </div>
+                      <div class="accordion-body collapse" id="collapseFour">
+                        <div class="accordion-inner">
+                          <ul>
+                            <li><b>Description</b></li>&nbsp;&nbsp;&nbsp;&nbsp;load Categories and saves BatchDawidSkene/IncrementalDawidSkene object with specified identefier exists to the database (and cache)
+                            <li><b>Parameters</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[JSON Array]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[number]</p>
+                            <li><b>Sample Request</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[{"name":"name1","prior":-1.0,"misclassification_cost":{}},{"name":"name2","prior":-1.0,"misclassification_cost":{}}]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;2</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;10</p>
+                            <li><b>Sample Response</b></li>&nbsp;&nbsp;&nbsp;&nbsp;built a ds with 2 categories[{"name":"name1","prior":0.0,"misclassification_cost":{"name1":0.0,"name2":1.0}},{"name":"name2","prior":0.0,"misclassification_cost":{"name1":1.0,"name2":0.0}}]
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a href="#collapseFive" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle">
+                          POST <code>loadCosts?loadCosts={loadCosts}&id={id}</code>
+                        </a>
+                      </div>
+                      <div class="accordion-body collapse" id="collapseFive">
+                        <div class="accordion-inner">
+                          <ul>
+                            <li><b>Description</b></li>&nbsp;&nbsp;&nbsp;&nbsp;Loads a json set of misclassification cost objects
+                            <li><b>Parameters</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[JSON Array]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                            <li><b>Sample Request</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[{"categoryFrom":"name1","categoryTo":"name2","cost":0.9},{"categoryFrom":"name1","categoryTo":"name2","cost":0.1},{"categoryFrom":"name2","categoryTo":"name1","cost":0.4}]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;2</p>
+                            <li><b>Sample Response</b></li>&nbsp;&nbsp;&nbsp;&nbsp;adding 3 new misclassification costs
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a href="#collapseSix" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle">
+                          POST <code>loadWorkerAssignedLabel?data={data}&id={id}</code>
+                        </a>
+                      </div>
+                      <div class="accordion-body collapse" id="collapseSix">
+                        <div class="accordion-inner">
+                          <ul>
+                            <li><b>Description</b></li>&nbsp;&nbsp;&nbsp;&nbsp;add a worker-assigned label to the model
+                            <li><b>Parameters</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[JSON Array]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                            <li><b>Sample Request</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;{"workerName":"workerName","objectName":"objectName","categoryName":"name1"}</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;2</p>
+                            <li><b>Sample Response</b></li>&nbsp;&nbsp;&nbsp;&nbsp;adding {"workerName":"workerName","objectName":"objectName","categoryName":"name1"}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a href="#collapseSeven" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle">
+                          POST <code>loadWorkerAssignedLabels?data={data}&id={id}</code>
+                        </a>
+                      </div>
+                      <div class="accordion-body collapse" id="collapseSeven">
+                        <div class="accordion-inner">
+                          <ul>
+                            <li><b>Description</b></li>&nbsp;&nbsp;&nbsp;&nbsp;add a worker-assigned label to the model
+                            <li><b>Parameters</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[JSON Array]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                            <li><b>Sample Request</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[{"workerName":"workerName","objectName":"objectName","categoryName":"name1"},{"workerName":"workerName2","objectName":"objectName2","categoryName":"name2"}]  </p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;2</p>
+                            <li><b>Sample Response</b></li>&nbsp;&nbsp;&nbsp;&nbsp;adding 2 labels
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a href="#collapseEight" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle">
+                          POST <code>loadGoldLabel?data={data}&id={id}</code>
+                        </a>
+                      </div>
+                      <div class="accordion-body collapse" id="collapseEight">
+                        <div class="accordion-inner">
+                          <ul>
+                            <li><b>Description</b></li>&nbsp;&nbsp;&nbsp;&nbsp;add a gold label to the model
+                            <li><b>Parameters</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[JSON Object]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                            <li><b>Sample Request</b></li>
+                              <p>{"objectName":"objectName2","correctCategory":"name1"}&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                              <p>2&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                            <li><b>Sample Response</b></li>&nbsp;&nbsp;&nbsp;&nbsp;adding gold label: {"objectName":"objectName2","correctCategory":"name1"}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a href="#collapseNine" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle">
+                          POST <code>loadGoldLabels?data={data}&id={id}</code>
+                        </a>
+                      </div>
+                      <div class="accordion-body collapse" id="collapseNine">
+                        <div class="accordion-inner">
+                          <ul>
+                            <li><b>Description</b></li>&nbsp;&nbsp;&nbsp;&nbsp;add gold labels to the model
+                            <li><b>Parameters</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[JSON Object]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                            <li><b>Sample Request</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[{"objectName":"objectName2","correctCategory":"name1"}, {"objectName":"objectName","correctCategory":"name2"}]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;2</p>
+                            <li><b>Sample Response</b></li>&nbsp;&nbsp;&nbsp;&nbsp;adding 2 gold labels
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a href="#collapseTen" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle">
+                          GET <code>majorityVote?id={id}&objectName={objectName}</code>
+                        </a>
+                      </div>
+                      <div class="accordion-body collapse" id="collapseTen">
+                        <div class="accordion-inner">
+                          <ul>
+                            <li><b>Description</b></li>&nbsp;&nbsp;&nbsp;&nbsp;computes majority votes for objects
+                            <li><b>Parameters</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                            <li><b>Sample Request</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;2</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[objectName,objectName2]</p>
+                            <li><b>Sample Response</b></li>&nbsp;&nbsp;&nbsp;&nbsp;{"objectName":"name2","objectName2":"name1"}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a href="#collapseEleven" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle">
+                          POST <code>majorityVotes?id={id}&objects={objects}</code>
+                        </a>
+                      </div>
+                      <div class="accordion-body collapse" id="collapseEleven">
+                        <div class="accordion-inner">
+                          <ul>
+                            <li><b>Description</b></li>&nbsp;&nbsp;&nbsp;&nbsp;computes majority votes for objects
+                            <li><b>Parameters</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[JSON Array]</p>
+                            <li><b>Sample Request</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;2</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[objectName,objectName2]</p>
+                            <li><b>Sample Response</b></li>&nbsp;&nbsp;&nbsp;&nbsp;{"objectName":"name2","objectName2":"name1"}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a href="#collapseTwelve" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle">
+                          GET <code>majorityVotes?id={id}</code>
+                        </a>
+                      </div>
+                      <div class="accordion-body collapse" id="collapseTwelve">
+                        <div class="accordion-inner">
+                          <ul>
+                            <li><b>Description</b></li>&nbsp;&nbsp;&nbsp;&nbsp;computes majority votes for objects
+                            <li><b>Parameters</b></li>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]
+                            <li><b>Sample Request</b></li>&nbsp;&nbsp;&nbsp;&nbsp;2
+                            <li><b>Sample Response</b></li>&nbsp;&nbsp;&nbsp;&nbsp;{"objectName":"name2","objectName2":"name1"}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a href="#collapseThirteen" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle">
+                          POST <code>objectProbs?id={id}&objects={objects}</code>
+                        </a>
+                      </div>
+                      <div class="accordion-body collapse" id="collapseThirteen">
+                        <div class="accordion-inner">
+                          <ul>
+                            <li><b>Description</b></li>&nbsp;&nbsp;&nbsp;&nbsp;computes class probs objects
+                            <li><b>Parameters</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[JSON Array]</p>
+                            <li><b>Sample Request</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;2</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[objectName,objectName2]</p>
+                            <li><b>Sample Response</b></li>&nbsp;&nbsp;&nbsp;&nbsp;{"objectName2":{"name1":1.0,"name2":0.0},"objectName":{"name1":0.0,"name2":1.0}}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a href="#collapseFourteen" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle">
+                          GET <code>objectProb?id={id}&object={object}</code>
+                        </a>
+                      </div>
+                      <div class="accordion-body collapse" id="collapseFourteen">
+                        <div class="accordion-inner">
+                          <ul>
+                            <li><b>Description</b></li>&nbsp;&nbsp;&nbsp;&nbsp;computes class probs objects
+                            <li><b>Parameters</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[JSON Object]</p>
+                            <li><b>Sample Request</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;2</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;ObjectName2</p>
+                            <li><b>Sample Response</b></li>&nbsp;&nbsp;&nbsp;&nbsp;{"name1":1.0,"name2":0.0}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a href="#collapseFifteen" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle">
+                          GET <code>computeBlocking?iterations={iterations}&id={id}</code>
+                        </a>
+                      </div>
+                      <div class="accordion-body collapse" id="collapseFifteen">
+                        <div class="accordion-inner">
+                          <ul>
+                            <li><b>Description</b></li>&nbsp;&nbsp;&nbsp;&nbsp;runs the algorithm, iterating the specified number of times 
+                            <li><b>Parameters</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[number]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                            <li><b>Sample Request</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;2</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;10</p>
+                            <li><b>Sample Response</b></li>&nbsp;&nbsp;&nbsp;&nbsp;performed ds iteration 10 times, took: 1ms.
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a href="#collapseSixteen" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle">
+                          GET <code>printWorkerSummary?verbose={verbose}&id={id}</code>
+                        </a>
+                      </div>
+                      <div class="accordion-body collapse" id="collapseSixteen">
+                        <div class="accordion-inner">
+                          <ul>
+                            <li><b>Description</b></li>&nbsp;&nbsp;&nbsp;&nbsp;print Worker`s info
+                            <li><b>Parameters</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                            <li><b>Sample Request</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;no matter</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;2</p>
+                            <li><b>Sample Response</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;Worker: workerName</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;Error Rate: 46.0%</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;Quality (Expected): 41%</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;Quality (Optimized): 5%</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;Number of Annotations: 1</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;Number of Gold Tests: 1</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;Confusion Matrix: </p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;P[name1->name1]=90.0%</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;P[name1->name2]=10.0%</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;P[name2->name1]=55.0%</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;P[name2->name2]=45.0%</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;Worker: workerName2</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;Error Rate: 19.0%</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;Quality (Expected): 42%</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;Quality (Optimized): 0%</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;Number of Annotations: 1 </p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;Number of Gold Tests: 1</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;Confusion Matrix: </p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;P[name1->name1]=45.0% P[name1->name2]=55.0%</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;P[name2->name1]=10.0% P[name2->name2]=90.0%</p>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a href="#collapseSeventeen" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle">
+                          GET <code>printObjectsProbs?entropy={entropy}&id={id}</code>
+                        </a>
+                      </div>
+                      <div class="accordion-body collapse" id="collapseSeventeen">
+                        <div class="accordion-inner">
+                          <ul>
+                            <li><b>Description</b></li>&nbsp;&nbsp;&nbsp;&nbsp;calculates and prints object`s probabilities
+                            <li><b>Parameters</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[number with floating point]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                            <li><b>Sample Request</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;2</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;0.5</p>
+                            <li><b>Sample Response</b></li>&nbsp;&nbsp;&nbsp;&nbsp;Object Pr[name1] Pr[name2] Pre-DS Majority Label Pre-DS Min Cost Label Post-DS Majority Label Post-DS Min Cost Label
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a href="#collapseEighteen" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle">
+                          GET <code>objectProbs?object={object}&entropy={entropy}&id={id}</code>
+                        </a>
+                      </div>
+                      <div class="accordion-body collapse" id="collapseEighteen">
+                        <div class="accordion-inner">
+                          <ul>
+                            <li><b>Description</b></li>&nbsp;&nbsp;&nbsp;&nbsp;calculates and prints object`s probabilities
+                            <li><b>Parameters</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[number with floating point]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                            <li><b>Sample Request</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;ObjectName2</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;2</p>
+                            <li><b>Sample Response</b></li>&nbsp;&nbsp;&nbsp;&nbsp;null
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a href="#collapseNineteen" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle">
+                          GET <code>printPriors?id={id}</code>
+                        </a>
+                      </div>
+                      <div class="accordion-body collapse" id="collapseNineteen">
+                        <div class="accordion-inner">
+                          <ul>
+                            <li><b>Description</b></li>&nbsp;&nbsp;&nbsp;&nbsp;prints priors by given id
+                            <li><b>Parameters</b></li>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]
+                            <li><b>Sample Request</b></li>&nbsp;&nbsp;&nbsp;&nbsp;2
+                            <li><b>Sample Response</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;Prior[name1]=0.5</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;Prior[name2]=0.5</p>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a href="#collapseTwenty" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle">
+                          GET <code>classPriors?id={id}</code>
+                        </a>
+                      </div>
+                      <div class="accordion-body collapse" id="collapseTwenty">
+                        <div class="accordion-inner">
+                          <ul>
+                            <li><b>Description</b></li>&nbsp;&nbsp;&nbsp;&nbsp;prints the list of the category/priority relations
+                            <li><b>Parameters</b></li>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]
+                            <li><b>Sample Request</b></li>&nbsp;&nbsp;&nbsp;&nbsp;2
+                            <li><b>Sample Response</b></li>&nbsp;&nbsp;&nbsp;&nbsp;{"name1":0.5,"name2":0.5}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a href="#collapseTwentyOne" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle">
+                          GET <code>getDawidSkene?id={id}</code>
+                        </a>
+                      </div>
+                      <div class="accordion-body collapse" id="collapseTwentyOne">
+                        <div class="accordion-inner">
+                          <ul>
+                            <li><b>Description</b></li>&nbsp;&nbsp;&nbsp;&nbsp;prints BatchDawidSkene or IncrementalDawidSkene by given identifier
+                            <li><b>Parameters</b></li>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]
+                            <li><b>Sample Request</b></li>&nbsp;&nbsp;&nbsp;&nbsp;2
+                            <li><b>Sample Response</b></li>&nbsp;&nbsp;&nbsp;&nbsp;{"dsmethod":"UPDATEWORKERS","priorDenominator":2.0,"objects":{"objectName":{"name":"objectName","isGold":true,"correctCategory":"name2","categoryProbability":{"name1":0.0,"name2":1.0},"labels":[{"workerName":"workerName","objectName":"objectName","categoryName":"name1"}]},"objectName2":{"name":"objectName2","isGold":true,"correctCategory":"name1","categoryProbability":{"name1":1.0,"name2":0.0},"labels":[{"workerName":"workerName2","objectName":"objectName2","categoryName":"name2"}]}},"workers":{"workerName":{"name":"workerName","cm":{"categories":["name1","name2"],"matrix":{"{\"to\":\"name1\",\"from\":\"name2\"}":1.1,"{\"to\":\"name2\",\"from\":\"name1\"}":0.1,"{\"to\":\"name2\",\"from\":\"name2\"}":0.9,"{\"to\":\"name1\",\"from\":\"name1\"}":0.9},"rowDenominator":{"name1":0.9999999999999999,"name2":2.0}},"labels":[{"workerName":"workerName","objectName":"objectName","categoryName":"name1"}]},"workerName2":{"name":"workerName2","cm":{"categories":["name1","name2"],"matrix":{"{\"to\":\"name1\",\"from\":\"name2\"}":0.1,"{\"to\":\"name2\",\"from\":\"name1\"}":1.1,"{\"to\":\"name2\",\"from\":\"name2\"}":0.8999999999999999,"{\"to\":\"name1\",\"from\":\"name1\"}":0.9},"rowDenominator":{"name1":2.0,"name2":1.0}},"labels":[{"workerName":"workerName2","objectName":"objectName2","categoryName":"name2"}]}},"categories":{"name1":{"name":"name1","prior":1.0,"misclassification_cost":{"name1":0.0,"name2":0.1}},"name2":{"name":"name2","prior":1.0,"misclassification_cost":{"name1":0.4,"name2":0.0}}},"fixedPriors":false,"id":"2"}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>   
+                  <ul>
+                    <li>
+                      Example of the Request
+                    </li><pre>
+  &lt;form  method="post"
+         action="http://23.21.128.180:8080/GetAnotherLabel/rest/loadCategories"
+         name="formOne"
+         enctype="application/json;
+         charset=utf-8"&gt;
+         
+      &lt;input name="id" value="2"/&gt;
+      
+      &lt;input name="incremental" value="10"/&gt;
+      
+      &lt;textarea name="categories"&gt;
+        [{"name":"name1","prior":-1.0,"misclassification_cost":{}},
+         {"name":"name2","prior":-1.0,"misclassification_cost":{}}]
+      &lt;/textarea&gt;
+      
+      &lt;button type="submit"&gt;
+        Compute
+      &lt;/button&gt;
+      
+  &lt;/form&gt;</pre>
+                  </ul>
+                </p>
+              </div>
+              <div class="tab-pane" id="tab4">
+                <p>
+                  <div id="accordion3" class="accordion">
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a href="#collapseOne3" data-parent="#accordion3" data-toggle="collapse" class="accordion-toggle">
+                          POST <code>loadCategories?names={category_name1,category_name2...category_nameN}&id={id}&incremental={incremental}</code>
+                        </a>
+                      </div>
+                      <div class="accordion-body collapse" id="collapseOne3">
+                        <div class="accordion-inner">
+                          <ul>
+                            <li><b>Description</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;load Categories and saves BatchDawidSkene/IncrementalDawidSkene object with specified identefier exists to the database (and cache)</p>
+                            <li><b>Parameters</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[number]</p>
+                            <li><b>Sample Request</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;http://23.21.128.180:8080/GetAnotherLabel/rest/notjson/loadCategories</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;name1, name2, name3</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;12</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;10</p>
+                            <li><b>Sample Response</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;POST http://23.21.128.180:8080/GetAnotherLabel/rest/loadCategories returned a response status of 200 OK</p>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a href="#collapseTwo3" data-parent="#accordion3" data-toggle="collapse" class="accordion-toggle">
+                          POST <code>loadCosts?from={from1,from2...fromN}&to={to1,to2...toN}&cost={cost1,cost2..costN}&id={id}</code>
+                        </a>
+                      </div>
+                      <div class="accordion-body collapse" id="collapseTwo3">
+                      <div class="accordion-inner">
+                          <ul>
+                            <li><b>Description</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;Loads a json set of misclassification cost objects</p>
+                            <li><b>Parameters</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                            <li><b>Sample Request</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;http://23.21.128.180:8080/GetAnotherLabel/rest/notjson/loadCosts</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;name1,name1,name2</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;name2,name2,name1</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;0.9,0.1,0.4</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;2</p>
+                            <li><b>Sample Response</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;POST http://23.21.128.180:8080/GetAnotherLabel/rest/loadCosts returned a response status of 200 OK</p>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a href="#collapseThree3" data-parent="#accordion3" data-toggle="collapse" class="accordion-toggle">
+                          POST <code>loadWorkerAssignedLabel?workerName={workerName}&objectName={objectName}&categoryName={categoryName}&id={id}</code>
+                        </a>
+                      </div>
+                      <div class="accordion-body collapse" id="collapseThree3">
+                        <div class="accordion-inner">
+                          <ul>
+                            <li><b>Description</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;add a worker-assigned label to the model</p>
+                            <li><b>Parameters</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                            <li><b>Sample Request</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;http://23.21.128.180:8080/GetAnotherLabel/rest/notjson/loadWorkerAssignedLabels</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;workerName11</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;objectName22</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;name1</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;2</p>
+                            <li><b>Sample Response</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;POST http://23.21.128.180:8080/GetAnotherLabel/rest/loadWorkerAssignedLabel returned a response status of 200 OK</p>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a href="#collapseFour3" data-parent="#accordion3" data-toggle="collapse" class="accordion-toggle">
+                          POST <code>loadWorkerAssignedLabels?workerName={workerName1,workerName2..workerNameN}&objectName={objectName1,objectName2..objectNameN}&categoryName={categoryName1,categoryName2..categoryNameN}&id={id}</code>
+                        </a>
+                      </div>
+                      <div class="accordion-body collapse" id="collapseFour3">
+                        <div class="accordion-inner">
+                          <ul>
+                            <li><b>Description</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;add a worker-assigned labels to the model</p>
+                            <li><b>Parameters</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                            <li><b>Sample Request</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;http://23.21.128.180:8080/GetAnotherLabel/rest/notjson/loadWorkerAssignedLabels</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;workerName11,workerName12</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;objectName22,objectName23</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;name1,name2</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;2</p>
+                            <li><b>Sample Response</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;POST http://23.21.128.180:8080/GetAnotherLabel/rest/loadWorkerAssignedLabels returned a response status of 200 OK</p>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a href="#collapseFive3" data-parent="#accordion3" data-toggle="collapse" class="accordion-toggle">
+                          POST <code>loadGoldLabel?objectName={objectName}&correctCategory={correctCategory}&id={id}</code>
+                        </a>
+                      </div>
+                      <div class="accordion-body collapse" id="collapseFive3">
+                        <div class="accordion-inner">
+                          <ul>
+                            <li><b>Description</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;add a gold label to the model</p>
+                            <li><b>Parameters</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                            <li><b>Sample Request</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;http://23.21.128.180:8080/GetAnotherLabel/rest/notjson/loadGoldLabel</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;objectName2</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;name1</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;2</p>
+                            <li><b>Sample Response</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;POST http://23.21.128.180:8080/GetAnotherLabel/rest/loadGoldLabel returned a response status of 200 OK</p>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a href="#collapseSix3" data-parent="#accordion3" data-toggle="collapse" class="accordion-toggle">
+                          POST <code>loadGoldLabels?objectName={objectName1,objectName2..objectNameN}&correctCategory={correctCategory1,correctCategory2..correctCategoryN}&id={id}</code>
+                        </a>
+                      </div>
+                      <div class="accordion-body collapse" id="collapseSix3">
+                        <div class="accordion-inner">
+                          <ul>
+                            <li><b>Description</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;add gold labels to the model</p>
+                            <li><b>Parameters</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;[any sequence of characters]</p>
+                            <li><b>Sample Request</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;http://23.21.128.180:8080/GetAnotherLabel/rest/notjson/loadGoldLabels</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;objectName2, on3</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;name1,name2</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;2</p>
+                            <li><b>Sample Response</b></li>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;POST http://23.21.128.180:8080/GetAnotherLabel/rest/loadGoldLabels returned a response status of 200 OK</p>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </p>
+              </div>
+            </div>
+          </div>
+          
         </div><!--/span-->
       </div><!--/row-->
-
+    <div class="modal hide fade in" id="myModal">
+        <div class="modal-header">
+                <button class="close" data-dismiss="modal"><i class="icon-remove"></i></button>
+                <h3>DSaS API Documentation</h3>
+        </div>
+        <div class="modal-body">
+            <p>
+              <p><h4>Service</h4></p>
+              <p>
+                Class <code>com.datascience.gal.service.Service</code> is a web-service container, binded to the <code>http://23.21.128.180:8080/GetAnotherLabel/rest url</code>, could be runned locally on <code>[SERVER HOST:PORT]/GetAnotherLabel/rest</code>. 
+              </p>
+              <p>
+                Be aware that url is not correct till the right web-method [with parameter[s]] `s[`ve] been added, such as (please be familiar with <i>Summary of Resource URL Patterns</i> section) <code>reset, exists, loadCategories</code> e.g.
+              </p>
+            </p>
+            
+            <p>
+              <p><h4>Brief Intro</h4></p>
+              <p>
+                To setup locally the project you may need Maven (3.x.x) (cmd mvn --version), Tomcat 6, JRE/JDK(1.6, 6.x.0_x), MySQL. 
+              </p>
+              <p>
+                MSQL is needed ONLY if you are suppose to use Web-Service named Service, for other purposes of using DSaS you may be interested in reading <a href="https://github.com/ipeirotis/Get-Another-Label/wiki/How-to-run" target="_blank">How to run DSaS</a>
+              </p>
+            </p>
+            
+            <p>
+              <p><h4>What for do we need database? Which Pitfalls could we be faced with?</h4></p>
+              <p>
+                We need database to save to/load from by Id any data structure, such as <code>BatchDawidSkene/IncrementalDawidSkene, Category</code>, various collections e.g. 
+              </p>
+              <p>
+                Every web-method which contain id parameter always refers to the specific record of the table in database. Yes, right, ONE table, which gives a hand every entity, of any type, any time. Web-methods are NOT syncronized at the current stage of development. Table COULD contain duplicate data. 
+              </p>
+            </p>
+            <p>
+              <p><h4>Which type of data is expected? How to test? In which order? Is it critical to keep some ordering of calling?</h4></p>
+              <p>
+                Usually <code>id</code> may not be only numeric, you may try any characters
+Data should has JSON type, to generate <code>Category</code> or <code>Collection of categories</code> you may use <a href="http://23.21.128.180:8080/GetAnotherLabel/rest/compose/composeDSForm" target="_blank">Composer</a> Also you may try <a href="http://curl.haxx.se/download.html" target="_blank">cURL</a>.
+              </p>
+              <p>
+                Web-methods are splitted by two groups, POST and GET oriented. To test GET methods you may just type in browser specific url, to test POST web-methods you may create simple html file with form. 
+              </p>
+              <p>
+                Order of testing is important because you need to be sure that data which you treat exists. 
+              </p>
+              <p>
+                Order of calling depends of previous executions. For instance every method name of which starts from <code>load (loadCategories, loadGoldLabels)</code> stores/updates object <code>BatchDawidSkene/IncrementalDawidSkene</code> to/into the database. Afterwards any other web-method may use that object by specific <code>id</code> which you may keep in mind. None of the methods return list of objects, JFYI. 
+              </p>
+            </p>
+        </div>
+        <div class="modal-footer">
+                <a class="btn" data-dismiss="modal" href="#">Close</a>
+        </div>
+    </div>
       <hr>
 
       <footer>
-        <p>&copy; Company 2012</p>
+        <p>&copy; Panos Iperiotis 2012</p>
       </footer>
 
     </div><!--/.fluid-container-->
@@ -147,5 +824,7 @@
     <script src="../docs/assets/js/bootstrap-carousel.js"></script>
     <script src="../docs/assets/js/bootstrap-typeahead.js"></script>
 
+<link href="google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="google-code-prettify/prettify.js"></script>
   </body>
 </html>

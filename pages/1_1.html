@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Bootstrap, from Twitter</title>
+    <title>Installation Instructions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Panos Iperiotis">
 
     <!-- Le styles -->
     <link href="../docs/assets/css/bootstrap.css" rel="stylesheet">
@@ -57,7 +57,7 @@
           </div>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="../index.html">Home</a></li>
+              <li><a href="../index.html"><i class="icon-home icon-white"></i>Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
@@ -81,51 +81,89 @@
         </div><!--/span-->
         <div class="span9">
           <div class="hero-unit">
-            <h1>Installation Instructions</h1>
-            <p><br/>Dddddd dddddd ddddddd ddd dddd ddddd ddd ddddd dd dddd ddddd dddddd ddddd ddddd ddddd ddd d ddd</p>
-            <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+            <h1><img src="../docs/assets/img/glyphicons/glyphicons_266_book_open.png" class="bs-icon"> Installation Instructions</h1>
+            <p><br/>Helps to setup project locally</p>
+            <a data-toggle="modal" href="#myModal" class="btn btn-medium btn-info"><i class="icon-info-sign icon-white"></i> Learn More</a>
           </div>
-          <div class="row-fluid">
-            <div class="span4">
-              <h2>Heading Page1.1 N1</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="span4">
-              <h2>Heading Page1.1 N2</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="span4">
-              <h2>Heading Page1.1 N3</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.  </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
-            </div><!--/span-->
-          </div><!--/row-->
-          <div class="row-fluid">
-            <div class="span4">
-              <h2>Heading Page1.1 N4</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="span4">
-              <h2>Heading Page1.1 N5</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="span4">
-              <h2>Heading Page1.1 N6</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
-            </div><!--/span-->
+          <div class="tabbable tabs-left">
+          <ul class="nav nav-tabs">
+              <li class="active">
+                <a data-toggle="tab" href="#lA">Where to get the latest code?</a>
+              </li>
+              <li class="">
+                <a data-toggle="tab" href="#lB">How to get the latest code?</a>
+              </li>
+              <li class="">
+                <a data-toggle="tab" href="#lC">Soft to be installed before you start</a>
+              </li>
+              <li class="">
+                <a data-toggle="tab" href="#lD">How to build, deploy, run?</a>
+              </li>
+              
+          </ul>
+          <div class="tab-content">
+            <div id="lA" class="tab-pane active">
+              <p>Open Source (this is fabulous, isn't it?) project DSaS lays <a href="https://github.com/jattenberg/DSaS" target="_blank">here</a>. </p>
+            </div>
+            <div id="lB" class="tab-pane">
+              <p>You may use <a href="http://git-scm.com/downloads" target="_blank">git</a> or <a href="http://www.eclipse.org/egit/download/" target="_blank">Plugin for Eclipse</a>. How-to-use you may find <a href="http://git-scm.com/doc" target="_blank">here</a> for git, and <a href="http://www.eclipse.org/egit/documentation/" target="_blank">here</a> for the Eclipse Plugin.</p>
+              <p>Also you may try to use another Version Control System, such as <a href="http://www.nongnu.org/cvs/" target="_blank">CVS</a>, <a href="http://subversion.tigris.org/" target="_blank">SVN</a>, <a href="http://mercurial.selenic.com/wiki/" target="_blank">Mercurial</a>, <a href="http://bazaar.canonical.com/en/" target="_blank">Bazaar</a>, <a href="http://java-source.net/open-source/content-managment-systems/libresource" target="_blank">LibreSource</a>, <a href="http://www.monotone.ca/" target="_blank">Monotone</a>.</p>
+              <p>
+                As Version Control Tools you may find attractive to use:
+                <ul>
+                  <li><a href="http://qct.sourceforge.net/" target="_blank">QCT GUI commit tool</a>, a version control commit tool that supports Mercurial, Bazaar, Cogito (Git), Subversion, Monotone, and CVS.</li>
+                  <li><a href="http://meldmerge.org/" target="_blank">Meld</a>, a merge and diff tool that allows you to compare two or three files and edit them in place, while updating automatically. It works with CVS, Subversion, Bazaar and Mercurial.</li>
+                  <li><a href="http://www.tortoisecvs.org/" target="_blank">Tortoise CVS</a>, a great client for CVS on Windows.</li>
+                  <li><a href="http://tortoisesvn.tigris.org/" target="_blank">Tortoise SVN</a>, a great client for viewing, editing and modifying your Subversion code base on Windows.</li>
+                  <li><a href="http://www.versionsapp.com/" target="_blank">Versions</a>, an elegant client that provides a pleasant way to work with Subversion on a Mac.</li>
+                  <li><a href="https://developer.apple.com/technologies/tools/" target="_blank">Xcode</a>, is Apple's developer environment and Subversion client that ships with Leopard on a Mac.</li>
+                </ul>
+              </p>
+            </div>
+            <div id="lC" class="tab-pane">
+              <p><a href="http://www.oracle.com/technetwork/java/javaee/downloads/java-archive-downloads-eesdk-419427.html#java_ee_sdk-5_03-fcs-oth-JPR" target="_blank">Java 5</a>, though <a href="http://www.oracle.com/technetwork/java/javaee/downloads/java-archive-downloads-eesdk-419427.html#java_ee_sdk-6u3-jdk-6u29-oth-JPR" target="_blank">Java 6</a> or <a href="http://www.oracle.com/technetwork/java/javaee/downloads/java-archive-downloads-eesdk-419427.html#java_ee_sdk-6u3-jdk-7u1-oth-JPR" target="_blank">Java 7</a> whould be even better choise.</p>
+              <p><a href="http://maven.apache.org/download.html" target="_blank">Maven 3 or Maven 2.2</a>, up to you.</p>
+              <p><a href="http://tomcat.apache.org/download-60.cgi" target="_blank">Apache Tomcat v. 6</a> or <a href="http://tomcat.apache.org/download-70.cgi" target="_blank">higher</a>.</p>
+            </div>
+            <div id="lD" class="tab-pane">
+              <p>It is not critical, either you use Maven from command line or you use Maven from IDE as plugin. In command line: type and run <code>mvn clean install -dSkipTests</code> if you use Maven outside of IDE, or create and run the same command, otherwise, inside IDE.</p>
+              <p>GetAnotherLabel.war appears in /target directory.</p>
+              <p>Start tomcat via command line or as service.</p>
+              <p>Deploy Web archive on tomcat.</p>
+              <p>Type in browser <a href="http://localhost:8080/GetAnotherLabel/rest/compute/formOne" target="_blank">http://localhost:8080/GetAnotherLabel/rest/compute/formOne</a> (URL varies from the given in case of non-standart settings)</p>
+            </div>
+          </div>
+          </div>
           </div><!--/row-->
         </div><!--/span-->
       </div><!--/row-->
-
+    <div class="modal hide fade in" id="myModal">
+		<div class="modal-header">
+			<button class="close" data-dismiss="modal"><i class="icon-remove"></i></button>
+			<h3>How to make work DSaS (Dawid Skene as a Service) locally without setup Database Connection</h3>
+		</div>
+		<div class="modal-body">
+			<p>Follow simple steps below for the first approach to use the main functionality of the application. You do not need setup Database Connection to use Web-Service like <a href="http://23.21.128.180:8080/GetAnotherLabel/rest/compute/formOne" target="_blank">this one</a>. </p>
+                        <p>
+                          To use additional Web-Service, which described <a href="1_2.html" target="_blank">there</a>, you need depest setup:
+                          <ul>
+                            <li>Finish 4 steps below.</li>
+                            <li>Install <a href="http://dev.mysql.com/downloads/" target="_blank">MySQL Server</a>.</li>
+                            <li>Install MySQL UI Tool, for instance <a href="http://www.heidisql.com/download.php" target="_blank">HeidiSQl</a>.</li>
+                            <li>Find locally and change following <a href="https://github.com/jattenberg/DSaS/blob/master/src/main/resources/dawidskene.properties" target="_blank">settings</a>.</li>
+                            <li>Find locally and execute following <a href="https://github.com/jattenberg/DSaS/blob/master/src/main/resources/dawidprojects.sql" target="_blank">script</a>.</li>
+                            <li>Rebuild, redeploy, enjoy!</li>
+                          </ul>
+                        </p>
+		</div>
+		<div class="modal-footer">
+			<a class="btn" data-dismiss="modal" href="#">Close</a>
+		</div>
+    </div>
       <hr>
 
       <footer>
-        <p>&copy; Company 2012</p>
+        <p>&copy; Panos Iperiotis 2012</p>
       </footer>
 
     </div><!--/.fluid-container-->
