@@ -102,9 +102,33 @@
               </div>
               <div class="tab-pane" id="tab3">
                 <p>
-                  
-                                    
                   <div id="accordion2" class="accordion">
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a href="#collapseZero" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle">
+                          GET <code>pingDB</code>
+                        </a>
+                      </div>
+                      <div class="accordion-body collapse" id="collapseZero">
+                        <div class="accordion-inner">
+                          <ul>
+                            <li><b>Description</b></li>&nbsp;&nbsp;&nbsp;&nbsp;a simple method to see if the service is awake and access to the DB has been reached 
+                            <li><b>Parameters</b></li>&nbsp;&nbsp;&nbsp;&nbsp;none
+                            <li><b>Sample Request</b></li>&nbsp;&nbsp;&nbsp;&nbsp;http://23.21.128.180:8080/GetAnotherLabel/rest/pingDB
+                            <li><b>Sample Response</b></li>
+                            <p>
+                            	&nbsp;&nbsp;&nbsp;&nbsp;processing request at: 2012-06-05T08:48:32.795-04:00
+                            </p>
+                            <p>
+                           		&nbsp;&nbsp;&nbsp;&nbsp;DawidSkene object with id=1234512345 has been inserted to the DB...
+                            </p>
+                            <p>
+                            	&nbsp;&nbsp;&nbsp;&nbsp;DawidSkene object with id=1234512345 has been removed from the DB...successfully
+                            </p>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>     
                     <div class="accordion-group">
                       <div class="accordion-heading">
                         <a href="#collapseOne" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle">
